@@ -25,8 +25,8 @@ class Order extends React.Component{
             component="span"
             className="count"
             transitionName="count"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={500}
+            transitionEnterTimeout={250}
+            transitionLeaveTimeout={250}
             >
             <span key={count}>{count}</span>
           </CSSTransitionGroup>
@@ -73,6 +73,12 @@ class Order extends React.Component{
       </div>
     )
   }
+}
+
+Order.propTypes = {
+  fishes: React.PropTypes.object.isRequired,
+  order: React.PropTypes.object.isRequired,
+  removeFromOrder: React.PropTypes.func.isRequired
 }
 
 export default Order;
